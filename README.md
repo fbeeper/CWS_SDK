@@ -20,7 +20,8 @@ it, simply add the following line to your Podfile:
 
 ## Author
 
-Ferran, ferran@aisle51.net
+Library: [NAB Velocity](https://github.com/nab-velocity/CWS_Objective_C)
+Pod: Ferran, ferran@aisle51.net
 
 ## License
 
