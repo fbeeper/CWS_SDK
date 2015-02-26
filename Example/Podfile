@@ -1,0 +1,8 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+
+target 'CWS_SDK', :exclusive => true do
+  pod "CWS_SDK", :path => "../"
+
+  
+end

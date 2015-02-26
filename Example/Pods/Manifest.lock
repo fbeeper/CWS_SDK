@@ -1,0 +1,14 @@
+PODS:
+  - CWS_SDK (0.1.0)
+
+DEPENDENCIES:
+  - CWS_SDK (from `../`)
+
+EXTERNAL SOURCES:
+  CWS_SDK:
+    :path: ../
+
+SPEC CHECKSUMS:
+  CWS_SDK: 1d07bc15548d77ba52c311cbbbf82af823cf4b50
+
+COCOAPODS: 0.35.0
