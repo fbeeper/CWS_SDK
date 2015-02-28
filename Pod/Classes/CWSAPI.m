@@ -862,12 +862,12 @@ static CWSAPI *sharedAPI = nil;
 
     if (creditCard.securePaymentAccountData != nil)
     {
-        response = [self sendToURL:[NSString stringWithFormat:@"%@/Txn/%@", self.baseURL, self.workflowId] withHTTPmethod:@"POST" andBodyJSONOfDict:postDictionary requiresSession:YES error:error];
+        response = [self sendToURL:[NSString stringWithFormat:@"%@/Txn/%@/verify", self.baseURL, self.workflowId] withHTTPmethod:@"POST" andBodyJSONOfDict:postDictionary requiresSession:YES error:error];
         InfoLog(@"RESPONSE = %@", response);
     }
     else
     {
-        response = [self sendToURL:[NSString stringWithFormat:@"%@/Txn/%@", self.baseURL, self.serviceId] withHTTPmethod:@"POST" andBodyJSONOfDict:postDictionary requiresSession:YES error:error];
+        response = [self sendToURL:[NSString stringWithFormat:@"%@/Txn/%@/verify", self.baseURL, self.serviceId] withHTTPmethod:@"POST" andBodyJSONOfDict:postDictionary requiresSession:YES error:error];
         InfoLog(@"RESPONSE = %@", response);
     }
     if (response)
