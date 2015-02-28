@@ -850,9 +850,9 @@ static CWSAPI *sharedAPI = nil;
     /* Create transaction data object */
     NSError *transactionError = nil;
     NSMutableDictionary *transactionDataGenerated = [self buildTransactionWithCC:creditCard andTransaction:transactionData error:&transactionError];
-    [transactionDataGenerated setObject:@"BankcardTransactionPro,http://schemas.ipcommerce.com/CWS/v2.0/Transactions/Bankcard/Pro" forKey:kAccountType];
+    [transactionDataGenerated setObject:@"BankcardTransaction,http://schemas.ipcommerce.com/CWS/v2.0/Transactions/Bankcard" forKey:kAccountType];
     NSMutableDictionary *postDictionary = [[NSMutableDictionary alloc] init];
-    postDictionary[kAccountType] = @"AuthorizeAndCaptureTransaction,http://schemas.ipcommerce.com/CWS/v2.0/Transactions/Rest";
+    postDictionary[kAccountType] = @"AuthorizeTransaction,http://schemas.ipcommerce.com/CWS/v2.0/Transactions/Rest";
     postDictionary[kApplicationProfileId] = self.applicationProfileId;
     postDictionary[kMerchantProfileId] = self.merchantProfileId;
     postDictionary[kTransaction] = transactionDataGenerated;
